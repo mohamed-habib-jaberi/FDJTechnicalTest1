@@ -23,8 +23,15 @@ struct LeaguesView: View {
     }
 }
 
-//struct LeaguesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//       // LeaguesView(viewModel: StateObject(wrappedValue: LeaguesViewModel())
-//    }
-//}
+struct LeaguesView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+
+        let repositoryFactory = RepositoryFactoryImpl()
+        let interactorFactory = InteractorFactoryImpl(repositoryFactory: repositoryFactory)
+        let viewModelFactory = ViewModelFactoryImp(interactorFactory: interactorFactory)
+        let leaguesViewModel = viewModelFactory.makeLeaguesViewModel()
+        
+        LeaguesView(viewModelFactory: leaguesViewModel as LeaguesViewModelFactory )
+    }
+}
