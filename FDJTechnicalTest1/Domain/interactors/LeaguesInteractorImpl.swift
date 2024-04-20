@@ -1,0 +1,22 @@
+//
+//  LeaguesInteractorImpl.swift
+//  FDJTechnicalTest1
+//
+//  Created by Jaberi  on 20/04/2024.
+//
+
+import Foundation
+
+class LeaguesInteractorImpl: LeaguesInteractor {
+   
+    private let repository: LeagueRepository
+    
+    init(leagueRepository: LeagueRepository) {
+        self.repository = leagueRepository
+    }
+    
+    func getLeaguesList() async throws -> [League] {
+        return try await repository.getLeaguesList()
+    }
+}
+

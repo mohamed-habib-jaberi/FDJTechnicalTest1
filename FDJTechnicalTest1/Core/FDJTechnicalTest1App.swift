@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct FDJTechnicalTest1App: App {
+        
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            let repositoryFactory = RepositoryFactoryImpl()
+            let interactorFactory = InteractorFactoryImpl(repositoryFactory: repositoryFactory)
+            let viewModelFactory = ViewModelFactoryImp(interactorFactory: interactorFactory)
+            let leaguesViewModel = viewModelFactory.makeLeaguesViewModel()
+            
+            LeaguesView(viewModelFactory: leaguesViewModel as LeaguesViewModelFactory )
         }
     }
 }
