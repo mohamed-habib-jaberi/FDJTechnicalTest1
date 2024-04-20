@@ -25,6 +25,14 @@
 		0ED9E3D72BD3E6A70010D097 /* NetworkService+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D62BD3E6A70010D097 /* NetworkService+helpers.swift */; };
 		0ED9E3D92BD3E6CB0010D097 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D82BD3E6CB0010D097 /* NetworkError.swift */; };
 		0ED9E3DB2BD3E7D20010D097 /* EmptyResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3DA2BD3E7D10010D097 /* EmptyResponseDTO.swift */; };
+		0ED9E3E72BD3EC610010D097 /* XCTestCase+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3E62BD3EC610010D097 /* XCTestCase+Helpers.swift */; };
+		0ED9E3EA2BD3ECA70010D097 /* MemoryLeakTestableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3E92BD3ECA70010D097 /* MemoryLeakTestableProtocol.swift */; };
+		0ED9E3F32BD3EE160010D097 /* NetworkErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3F22BD3EE160010D097 /* NetworkErrorMock.swift */; };
+		0ED9E3F52BD3EE380010D097 /* NetworkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3F42BD3EE380010D097 /* NetworkerMock.swift */; };
+		0ED9E3F72BD3EE5A0010D097 /* BaseURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3F62BD3EE5A0010D097 /* BaseURLMock.swift */; };
+		0ED9E3F92BD3EE730010D097 /* EndpointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3F82BD3EE730010D097 /* EndpointMock.swift */; };
+		0ED9E4042BD3F08A0010D097 /* teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED9E4032BD3F08A0010D097 /* teams.json */; };
+		0ED9E4062BD3F09B0010D097 /* leagueList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED9E4052BD3F09B0010D097 /* leagueList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,14 @@
 		0ED9E3D62BD3E6A70010D097 /* NetworkService+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+helpers.swift"; sourceTree = "<group>"; };
 		0ED9E3D82BD3E6CB0010D097 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0ED9E3DA2BD3E7D10010D097 /* EmptyResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponseDTO.swift; sourceTree = "<group>"; };
+		0ED9E3E62BD3EC610010D097 /* XCTestCase+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Helpers.swift"; sourceTree = "<group>"; };
+		0ED9E3E92BD3ECA70010D097 /* MemoryLeakTestableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLeakTestableProtocol.swift; sourceTree = "<group>"; };
+		0ED9E3F22BD3EE160010D097 /* NetworkErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorMock.swift; sourceTree = "<group>"; };
+		0ED9E3F42BD3EE380010D097 /* NetworkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerMock.swift; sourceTree = "<group>"; };
+		0ED9E3F62BD3EE5A0010D097 /* BaseURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLMock.swift; sourceTree = "<group>"; };
+		0ED9E3F82BD3EE730010D097 /* EndpointMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointMock.swift; sourceTree = "<group>"; };
+		0ED9E4032BD3F08A0010D097 /* teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teams.json; sourceTree = "<group>"; };
+		0ED9E4052BD3F09B0010D097 /* leagueList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leagueList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +153,10 @@
 		0ED9E3962BD3D6F30010D097 /* FDJTechnicalTest1Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0ED9E3F02BD3EDE70010D097 /* Data */,
+				0ED9E3EE2BD3ED3E0010D097 /* Domain */,
+				0ED9E3E42BD3EC2C0010D097 /* Presentation */,
+				0ED9E3E12BD3EBF80010D097 /* Generated */,
 				0ED9E3972BD3D6F30010D097 /* FDJTechnicalTest1Tests.swift */,
 			);
 			path = FDJTechnicalTest1Tests;
@@ -304,6 +324,154 @@
 			path = Teams;
 			sourceTree = "<group>";
 		};
+		0ED9E3E12BD3EBF80010D097 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3E32BD3EC160010D097 /* Spys */,
+				0ED9E3E22BD3EC090010D097 /* Seeds */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		0ED9E3E22BD3EC090010D097 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		0ED9E3E32BD3EC160010D097 /* Spys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spys;
+			sourceTree = "<group>";
+		};
+		0ED9E3E42BD3EC2C0010D097 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3EB2BD3ECF00010D097 /* Flows */,
+				0ED9E3E82BD3EC950010D097 /* Protocols */,
+				0ED9E3E52BD3EC4C0010D097 /* Extension */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0ED9E3E52BD3EC4C0010D097 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3E62BD3EC610010D097 /* XCTestCase+Helpers.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0ED9E3E82BD3EC950010D097 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3E92BD3ECA70010D097 /* MemoryLeakTestableProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0ED9E3EB2BD3ECF00010D097 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3ED2BD3ED110010D097 /* Teams */,
+				0ED9E3EC2BD3ED080010D097 /* LeagueList */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		0ED9E3EC2BD3ED080010D097 /* LeagueList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LeagueList;
+			sourceTree = "<group>";
+		};
+		0ED9E3ED2BD3ED110010D097 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		0ED9E3EE2BD3ED3E0010D097 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3EF2BD3ED460010D097 /* interactor */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0ED9E3EF2BD3ED460010D097 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		0ED9E3F02BD3EDE70010D097 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3FA2BD3EEBF0010D097 /* Repositories */,
+				0ED9E3F12BD3EDF90010D097 /* Networker */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0ED9E3F12BD3EDF90010D097 /* Networker */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3F22BD3EE160010D097 /* NetworkErrorMock.swift */,
+				0ED9E3F42BD3EE380010D097 /* NetworkerMock.swift */,
+				0ED9E3F62BD3EE5A0010D097 /* BaseURLMock.swift */,
+				0ED9E3F82BD3EE730010D097 /* EndpointMock.swift */,
+			);
+			path = Networker;
+			sourceTree = "<group>";
+		};
+		0ED9E3FA2BD3EEBF0010D097 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3FC2BD3EEDD0010D097 /* Teams */,
+				0ED9E3FB2BD3EED30010D097 /* LeagueList */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0ED9E3FB2BD3EED30010D097 /* LeagueList */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3FE2BD3EEF30010D097 /* JsonMocks */,
+			);
+			path = LeagueList;
+			sourceTree = "<group>";
+		};
+		0ED9E3FC2BD3EEDD0010D097 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3FD2BD3EEEC0010D097 /* JsonMocks */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		0ED9E3FD2BD3EEEC0010D097 /* JsonMocks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E4032BD3F08A0010D097 /* teams.json */,
+			);
+			path = JsonMocks;
+			sourceTree = "<group>";
+		};
+		0ED9E3FE2BD3EEF30010D097 /* JsonMocks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E4052BD3F09B0010D097 /* leagueList.json */,
+			);
+			path = JsonMocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,6 +585,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED9E4062BD3F09B0010D097 /* leagueList.json in Resources */,
+				0ED9E4042BD3F08A0010D097 /* teams.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +624,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED9E3EA2BD3ECA70010D097 /* MemoryLeakTestableProtocol.swift in Sources */,
+				0ED9E3F52BD3EE380010D097 /* NetworkerMock.swift in Sources */,
+				0ED9E3E72BD3EC610010D097 /* XCTestCase+Helpers.swift in Sources */,
+				0ED9E3F92BD3EE730010D097 /* EndpointMock.swift in Sources */,
 				0ED9E3982BD3D6F30010D097 /* FDJTechnicalTest1Tests.swift in Sources */,
+				0ED9E3F72BD3EE5A0010D097 /* BaseURLMock.swift in Sources */,
+				0ED9E3F32BD3EE160010D097 /* NetworkErrorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
