@@ -116,9 +116,12 @@
 		0ED9E3852BD3D6F00010D097 /* FDJTechnicalTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				0ED9E3B62BD3DC940010D097 /* Presentation */,
+				0ED9E3CC2BD3E5650010D097 /* Domain */,
+				0ED9E3C22BD3DE9C0010D097 /* Data */,
+				0ED9E3C12BD3DE7D0010D097 /* Core */,
 				0ED9E38C2BD3D6F30010D097 /* Preview Content */,
 				0ED9E38A2BD3D6F30010D097 /* Assets.xcassets */,
-				0ED9E3B62BD3DC940010D097 /* Presentation */,
 			);
 			path = FDJTechnicalTest1;
 			sourceTree = "<group>";
@@ -151,9 +154,9 @@
 		0ED9E3B62BD3DC940010D097 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0ED9E3CC2BD3E5650010D097 /* Domain */,
-				0ED9E3C22BD3DE9C0010D097 /* Data */,
-				0ED9E3C12BD3DE7D0010D097 /* Core */,
+				0ED9E3DE2BD3E9640010D097 /* Subviews */,
+				0ED9E3DD2BD3E9560010D097 /* ViewModels */,
+				0ED9E3DC2BD3E94C0010D097 /* Views */,
 				0ED9E3B72BD3DCA80010D097 /* Ressources */,
 			);
 			path = Presentation;
@@ -187,7 +190,6 @@
 		0ED9E3C12BD3DE7D0010D097 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0ED9E3882BD3D6F00010D097 /* ContentView.swift */,
 				0ED9E3862BD3D6F00010D097 /* FDJTechnicalTest1App.swift */,
 			);
 			path = Core;
@@ -262,6 +264,44 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0ED9E3DC2BD3E94C0010D097 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3DF2BD3E99E0010D097 /* LeagueList */,
+				0ED9E3E02BD3E9B60010D097 /* Teams */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0ED9E3DD2BD3E9560010D097 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0ED9E3DE2BD3E9640010D097 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0ED9E3DF2BD3E99E0010D097 /* LeagueList */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3882BD3D6F00010D097 /* ContentView.swift */,
+			);
+			path = LeagueList;
+			sourceTree = "<group>";
+		};
+		0ED9E3E02BD3E9B60010D097 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teams;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
