@@ -9,7 +9,7 @@ import Foundation
 
 protocol NetworkService: AnyObject {
     var networker: Networker { get }
-    func request<T: Decodable>(baseURL: BaseURL?) async throws -> T
+    func request<T: Decodable>(baseURL: String, endpoint: String) async throws -> T
 }
 
 final class NetworkServiceImpl: NetworkService {
@@ -25,15 +25,16 @@ final class NetworkServiceImpl: NetworkService {
         
     }
     
-    func request<T: Decodable>(baseURL: BaseURL?) async throws -> T {
+    func request<T: Decodable>(baseURL: String, endpoint: String) async throws -> T {
         
         do {
             
             
-            let urlRequestt: NSMutableURLRequest? = NSMutableURLRequest(url: NSURL(string: "https://api.rawg.io/api/games?key=29ca278badb84604a82dcbacf09c0e40")! as URL,
+            let stringURL: String = baseURL + Constants.Networking.apiKey + endpoint
+            let urlRequestt: NSMutableURLRequest? = NSMutableURLRequest(url: NSURL(string: stringURL)! as URL,
                                                     cachePolicy: .useProtocolCachePolicy,
                                                 timeoutInterval: 10.0)
-            
+                        
             guard let urlRequest = urlRequestt else {
                 throw NetworkError.requestError(.urlGeneration)
             }

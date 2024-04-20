@@ -14,10 +14,5 @@ enum Constants {
         static let apiKey = "50130162"
         static let baseURL = "https://www.thesportsdb.com/api/v1/json/"
     }
-    
-    enum EndpointPath {
-        static let league = "/all_leagues.php"
-        static let team = "search_all_teams.php?l=French%20Ligue%201"
-    }
 }
 
