@@ -16,6 +16,15 @@
 		0ED9E3A42BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3A32BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift */; };
 		0ED9E3BA2BD3DCCF0010D097 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3B92BD3DCCF0010D097 /* Constants.swift */; };
 		0ED9E3C02BD3DDEB0010D097 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */; };
+		0ED9E3C72BD3DEF80010D097 /* GenericNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3C62BD3DEF80010D097 /* GenericNetworkError.swift */; };
+		0ED9E3C92BD3DF130010D097 /* GenericNetworkErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3C82BD3DF130010D097 /* GenericNetworkErrorResponseDTO.swift */; };
+		0ED9E3CB2BD3E25F0010D097 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3CA2BD3E25F0010D097 /* Endpoint.swift */; };
+		0ED9E3D12BD3E6340010D097 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D02BD3E6340010D097 /* NetworkService.swift */; };
+		0ED9E3D32BD3E65A0010D097 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D22BD3E65A0010D097 /* Networker.swift */; };
+		0ED9E3D52BD3E6760010D097 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D42BD3E6760010D097 /* BaseURL.swift */; };
+		0ED9E3D72BD3E6A70010D097 /* NetworkService+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D62BD3E6A70010D097 /* NetworkService+helpers.swift */; };
+		0ED9E3D92BD3E6CB0010D097 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3D82BD3E6CB0010D097 /* NetworkError.swift */; };
+		0ED9E3DB2BD3E7D20010D097 /* EmptyResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3DA2BD3E7D10010D097 /* EmptyResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,15 @@
 		0ED9E3A32BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJTechnicalTest1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0ED9E3B92BD3DCCF0010D097 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
+		0ED9E3C62BD3DEF80010D097 /* GenericNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkError.swift; sourceTree = "<group>"; };
+		0ED9E3C82BD3DF130010D097 /* GenericNetworkErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNetworkErrorResponseDTO.swift; sourceTree = "<group>"; };
+		0ED9E3CA2BD3E25F0010D097 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0ED9E3D02BD3E6340010D097 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0ED9E3D22BD3E65A0010D097 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		0ED9E3D42BD3E6760010D097 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		0ED9E3D62BD3E6A70010D097 /* NetworkService+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+helpers.swift"; sourceTree = "<group>"; };
+		0ED9E3D82BD3E6CB0010D097 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0ED9E3DA2BD3E7D10010D097 /* EmptyResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +116,9 @@
 		0ED9E3852BD3D6F00010D097 /* FDJTechnicalTest1 */ = {
 			isa = PBXGroup;
 			children = (
-				0ED9E3B62BD3DC940010D097 /* Presentation */,
-				0ED9E3862BD3D6F00010D097 /* FDJTechnicalTest1App.swift */,
-				0ED9E3882BD3D6F00010D097 /* ContentView.swift */,
-				0ED9E38A2BD3D6F30010D097 /* Assets.xcassets */,
 				0ED9E38C2BD3D6F30010D097 /* Preview Content */,
+				0ED9E38A2BD3D6F30010D097 /* Assets.xcassets */,
+				0ED9E3B62BD3DC940010D097 /* Presentation */,
 			);
 			path = FDJTechnicalTest1;
 			sourceTree = "<group>";
@@ -135,6 +151,9 @@
 		0ED9E3B62BD3DC940010D097 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0ED9E3CC2BD3E5650010D097 /* Domain */,
+				0ED9E3C22BD3DE9C0010D097 /* Data */,
+				0ED9E3C12BD3DE7D0010D097 /* Core */,
 				0ED9E3B72BD3DCA80010D097 /* Ressources */,
 			);
 			path = Presentation;
@@ -163,6 +182,86 @@
 				0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */,
 			);
 			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		0ED9E3C12BD3DE7D0010D097 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3882BD3D6F00010D097 /* ContentView.swift */,
+				0ED9E3862BD3D6F00010D097 /* FDJTechnicalTest1App.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0ED9E3C22BD3DE9C0010D097 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3CF2BD3E5FE0010D097 /* Repositories */,
+				0ED9E3C42BD3DEC40010D097 /* DTO */,
+				0ED9E3C32BD3DEB70010D097 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0ED9E3C32BD3DEB70010D097 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3C52BD3DEDA0010D097 /* Error */,
+				0ED9E3CA2BD3E25F0010D097 /* Endpoint.swift */,
+				0ED9E3D02BD3E6340010D097 /* NetworkService.swift */,
+				0ED9E3D22BD3E65A0010D097 /* Networker.swift */,
+				0ED9E3D42BD3E6760010D097 /* BaseURL.swift */,
+				0ED9E3D62BD3E6A70010D097 /* NetworkService+helpers.swift */,
+				0ED9E3D82BD3E6CB0010D097 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0ED9E3C42BD3DEC40010D097 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3DA2BD3E7D10010D097 /* EmptyResponseDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		0ED9E3C52BD3DEDA0010D097 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3C62BD3DEF80010D097 /* GenericNetworkError.swift */,
+				0ED9E3C82BD3DF130010D097 /* GenericNetworkErrorResponseDTO.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		0ED9E3CC2BD3E5650010D097 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0ED9E3CE2BD3E5EA0010D097 /* Repositories */,
+				0ED9E3CD2BD3E56D0010D097 /* interactors */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0ED9E3CD2BD3E56D0010D097 /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactors;
+			sourceTree = "<group>";
+		};
+		0ED9E3CE2BD3E5EA0010D097 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0ED9E3CF2BD3E5FE0010D097 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +394,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED9E3CB2BD3E25F0010D097 /* Endpoint.swift in Sources */,
+				0ED9E3C92BD3DF130010D097 /* GenericNetworkErrorResponseDTO.swift in Sources */,
+				0ED9E3D52BD3E6760010D097 /* BaseURL.swift in Sources */,
+				0ED9E3D12BD3E6340010D097 /* NetworkService.swift in Sources */,
 				0ED9E3892BD3D6F00010D097 /* ContentView.swift in Sources */,
 				0ED9E3872BD3D6F00010D097 /* FDJTechnicalTest1App.swift in Sources */,
+				0ED9E3D72BD3E6A70010D097 /* NetworkService+helpers.swift in Sources */,
+				0ED9E3D32BD3E65A0010D097 /* Networker.swift in Sources */,
 				0ED9E3C02BD3DDEB0010D097 /* AnyOptional.swift in Sources */,
+				0ED9E3D92BD3E6CB0010D097 /* NetworkError.swift in Sources */,
+				0ED9E3DB2BD3E7D20010D097 /* EmptyResponseDTO.swift in Sources */,
 				0ED9E3BA2BD3DCCF0010D097 /* Constants.swift in Sources */,
+				0ED9E3C72BD3DEF80010D097 /* GenericNetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
