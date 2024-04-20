@@ -15,7 +15,7 @@
 		0ED9E3A22BD3D6F30010D097 /* FDJTechnicalTest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3A12BD3D6F30010D097 /* FDJTechnicalTest1UITests.swift */; };
 		0ED9E3A42BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3A32BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift */; };
 		0ED9E3BA2BD3DCCF0010D097 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3B92BD3DCCF0010D097 /* Constants.swift */; };
-		0ED9E3BD2BD3DD490010D097 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3BC2BD3DD490010D097 /* AnyOptional.swift */; };
+		0ED9E3C02BD3DDEB0010D097 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		0ED9E3A12BD3D6F30010D097 /* FDJTechnicalTest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJTechnicalTest1UITests.swift; sourceTree = "<group>"; };
 		0ED9E3A32BD3D6F30010D097 /* FDJTechnicalTest1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDJTechnicalTest1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0ED9E3B92BD3DCCF0010D097 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0ED9E3BC2BD3DD490010D097 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
+		0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 		0ED9E3B72BD3DCA80010D097 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				0ED9E3BB2BD3DD490010D097 /* PropertyWrapper */,
+				0ED9E3BE2BD3DDD80010D097 /* PropertyWrapper */,
 				0ED9E3B82BD3DCBA0010D097 /* Constants */,
 			);
 			path = Ressources;
@@ -157,13 +157,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		0ED9E3BB2BD3DD490010D097 /* PropertyWrapper */ = {
+		0ED9E3BE2BD3DDD80010D097 /* PropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				0ED9E3BC2BD3DD490010D097 /* AnyOptional.swift */,
+				0ED9E3BF2BD3DDEB0010D097 /* AnyOptional.swift */,
 			);
-			name = PropertyWrapper;
-			path = "../../../../Documents/Interview ChatGPT/FDJTechnicalTest/FDJTechnicalTest/Presentation/PropertyWrapper";
+			path = PropertyWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +297,7 @@
 			files = (
 				0ED9E3892BD3D6F00010D097 /* ContentView.swift in Sources */,
 				0ED9E3872BD3D6F00010D097 /* FDJTechnicalTest1App.swift in Sources */,
-				0ED9E3BD2BD3DD490010D097 /* AnyOptional.swift in Sources */,
+				0ED9E3C02BD3DDEB0010D097 /* AnyOptional.swift in Sources */,
 				0ED9E3BA2BD3DCCF0010D097 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
