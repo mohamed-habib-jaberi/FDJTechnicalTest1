@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LeaguesView: View {
     
+    @State private var searchText = ""
+    
     // MARK: Stored Properties
     @StateObject private var viewModel: LeaguesViewModel
     
@@ -40,17 +42,18 @@ struct LeaguesView: View {
             }
             
         }
+        //.searchable(text: $searchText)
         .onViewDidLoad {
             Task { [weak viewModel] in
                 await viewModel?.loadLeagues()
             }
         }
-        
     }
     
     @ViewBuilder
     private var hasLeagues: some View {
         LeagueListView(leagues: viewModel.leagues)
+            .searchable(text: $searchText)
     }
 }
 

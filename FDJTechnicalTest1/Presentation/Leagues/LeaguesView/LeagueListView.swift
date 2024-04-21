@@ -11,11 +11,14 @@ struct LeagueListView: View {
     let leagues: [League]
     
     var body: some View {
-        List(leagues, id: \.idLeague) { league in
-            LeagueCell(league: league)
-                .padding(.horizontal, 0.0)
+        
+        NavigationView {
+            List(leagues, id: \.idLeague) { league in
+                LeagueCell(league: league)
+                    .padding(.horizontal, 0.0)
+            }
+            .navigationTitle("Leagues")
         }
-        .navigationTitle("Leagues")
     }
 }
 
