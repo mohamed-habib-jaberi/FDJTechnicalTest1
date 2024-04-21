@@ -6,16 +6,13 @@
 //
 
 import Foundation
-@testable import WeBank
+@testable import FDJTechnicalTest1
 
-struct EndpointMock: Endpoint {
-    var path: String
-    
-    
-    init(path: String) {
-        self.path = path
-        
-    }
-
-}
-
+//struct EndpointMock: Endpoint {
+//    var path: String
+//    
+//    init(path: String) {
+//        self.path = path
+//    }
+//}
+//

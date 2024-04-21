@@ -8,8 +8,8 @@
 import Foundation
 @testable import FDJTechnicalTest1
 
-class BaseURLMock: BaseURL {
-    var url: URL = URL(string: "https://mock.test.com")!
-    var headers: [String: String] = [:]
-    var queryParameters: [String: String] = [:]
-}
+//class BaseURLMock: BaseURL {
+//    var url: URL = URL(string: "https://mock.test.com")!
+//    var headers: [String: String] = [:]
+//    var queryParameters: [String: String] = [:]
+//}

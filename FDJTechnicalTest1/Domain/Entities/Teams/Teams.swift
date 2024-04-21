@@ -8,7 +8,7 @@
 import Foundation
 
 struct TeamsResponse: Decodable {
-    let leagues: [League]
+    let teams: [Team]
 }
 
 struct Team: Decodable, Hashable {
