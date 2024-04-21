@@ -8,6 +8,9 @@
 import Foundation
 
 struct LeaguesMock {
+    
+    static let league = League(idLeague: "4328", strLeague: "English Premier League", strSport: "Soccer", strLeagueAlternate: "Premier League, EPL")
+    
     static let leaguesList = [
         League(idLeague: "4328", strLeague: "English Premier League", strSport: "Soccer", strLeagueAlternate: "Premier League, EPL"),
         League(idLeague: "4329", strLeague: "English League Championship", strSport: "Soccer", strLeagueAlternate: "Championship"),

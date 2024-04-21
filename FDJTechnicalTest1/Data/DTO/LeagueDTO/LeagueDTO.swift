@@ -9,9 +9,9 @@ import Foundation
 
 struct LeagueDTO: Decodable {
     let idLeague: String
-    let strLeague: String
-    let strSport: String
-    let strLeagueAlternate: String
+    let strLeague: String?
+    let strSport: String?
+    let strLeagueAlternate: String?
 }
 
 extension LeagueDTO {

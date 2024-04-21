@@ -34,11 +34,9 @@ extension NetworkServiceImpl {
             let result = try decoder.decode(T.self, from: data)
             return result
         } catch {
-            if let emptyResponse = EmptyResponseDTO() as? T {
-                return emptyResponse
-            } else {
-                throw NetworkError.requestError(.parsingJSON)
-            }
+            
+            // Throw a more specific error based on the type of decoding error
+            throw NetworkError.requestError(.parsingJSON)
         }
     }
 }

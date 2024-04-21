@@ -14,5 +14,9 @@ enum Constants {
         static let apiKey = "50130162"
         static let baseURL = "https://www.thesportsdb.com/api/v1/json/"
     }
+    
+    enum Strings {
+        static let emptyString = ""
+    }
 }
 

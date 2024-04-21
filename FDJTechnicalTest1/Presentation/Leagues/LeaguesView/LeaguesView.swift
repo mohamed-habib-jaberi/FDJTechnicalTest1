@@ -18,15 +18,44 @@ struct LeaguesView: View {
     }
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            
+            switch viewModel.status {
+            case .isLoading:
+                LoaderView()
+                
+            case .hasLeagues:
+                hasLeagues
+                
+            case .emptyLeagues:
+                EmptyListView()
+                
+            case .onError:
+                ErrorView(retryAction: { [weak viewModel] in
+                    Task {
+                        await viewModel?.loadLeagues()
+                    }
+                })
+            }
+            
+        }
+        .onViewDidLoad {
+            Task { [weak viewModel] in
+                await viewModel?.loadLeagues()
+            }
+        }
+        
+    }
+    
+    @ViewBuilder
+    private var hasLeagues: some View {
+        LeagueListView(leagues: viewModel.leagues)
     }
 }
 
 struct LeaguesView_Previews: PreviewProvider {
-    
     static var previews: some View {
-
         let repositoryFactory = RepositoryFactoryImpl()
         let interactorFactory = InteractorFactoryImpl(repositoryFactory: repositoryFactory)
         let viewModelFactory = ViewModelFactoryImp(interactorFactory: interactorFactory)

@@ -26,31 +26,30 @@ final class NetworkServiceImpl: NetworkService {
     }
     
     func request<T: Decodable>(baseURL: String, endpoint: String) async throws -> T {
-        
-        do {
-            
-            
-            let stringURL: String = baseURL + Constants.Networking.apiKey + endpoint
-            let urlRequestt: NSMutableURLRequest? = NSMutableURLRequest(url: NSURL(string: stringURL)! as URL,
-                                                    cachePolicy: .useProtocolCachePolicy,
-                                                timeoutInterval: 10.0)
-                        
-            guard let urlRequest = urlRequestt else {
-                throw NetworkError.requestError(.urlGeneration)
-            }
-            
-            let (data, response) = try await networker.loadData(from: urlRequest as URLRequest)
-            guard let httpResponse = response as? HTTPURLResponse, (300..<600).contains(httpResponse.statusCode) else {
-               
-                return try await decode(data: data, response: response)
-            }
-            
-            let error: NetworkError = NetworkError.handleError(data: data, response: httpResponse)
-            throw error
-         
-        } catch let error {
-            print("error : \(error)")
-            throw handleNetworkError(error)
+        // Construct the URL by combining baseURL, API key, and endpoint
+        let stringURL = baseURL + Constants.Networking.apiKey + endpoint
+
+        // Create a URL request object
+        guard let url = URL(string: stringURL) else {
+            throw NetworkError.requestError(.urlGeneration)
         }
+        let urlRequest = URLRequest(url: url)
+
+        // Load data from the network
+        let (data, response) = try await networker.loadData(from: urlRequest)
+
+        let decodedData: T
+        
+        // Check if the response status code is in the success range
+        if let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) {
+            // Decode the data into the expected type
+            decodedData = try await decode(data: data, response: response)
+        } else {
+            // Handle error based on the response status code
+            let error = NetworkError.handleError(data: data, response: response as! HTTPURLResponse)
+            throw error
+        }
+        
+        return decodedData
     }
 }

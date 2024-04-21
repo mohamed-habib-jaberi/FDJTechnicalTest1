@@ -9,10 +9,10 @@ import Foundation
 
 struct TeamDTO: Decodable {
     let idTeam: String
-    let strTeam: String
-    let strTeamShort: String
-    let strLeague: String
-    let strTeamLogo: String
+    let strTeam: String?
+    let strTeamShort: String?
+    let strLeague: String?
+    let strTeamLogo: String?
 }
 
 extension TeamDTO {

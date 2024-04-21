@@ -13,12 +13,12 @@ struct LeaguesResponse: Decodable {
 
 struct League: Decodable, Hashable {
     let idLeague: String
-    let strLeague: String
-    let strSport: String
-    let strLeagueAlternate: String
+    let strLeague: String?
+    let strSport: String?
+    let strLeagueAlternate: String?
    
     
-    init(idLeague: String, strLeague: String, strSport: String, strLeagueAlternate: String ) {
+    init(idLeague: String, strLeague: String?, strSport: String?, strLeagueAlternate: String? ) {
         self.idLeague = idLeague
         self.strLeague = strLeague
         self.strSport = strSport
