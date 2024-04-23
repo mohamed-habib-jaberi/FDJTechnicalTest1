@@ -20,7 +20,14 @@ class LeagueRepositoryImpl: LeagueRepository {
         let endpoint = APIEndpoints.apiLeague
         
         let leaguesListDTO: LeagueListDTO = try await self.networkService.request(baseURL: baseURL, endpoint: endpoint)
-        print("leaguesListDTO 🐼: \(leaguesListDTO)")
                 return leaguesListDTO.toDomain()
+    }
+    
+    func getTeamsList(strLeague: String) async throws -> [Team] {
+        let baseURL = BaseURL.Networking.url
+        let endpoint = strLeague.buildTeamSearchURL()
+        
+        let teamsListDTO: TeamsDTO = try await self.networkService.request(baseURL: baseURL, endpoint: endpoint)
+                return teamsListDTO.toDomain()
     }
 }

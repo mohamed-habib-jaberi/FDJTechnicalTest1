@@ -10,7 +10,3 @@ import Foundation
 protocol LeaguesInteractorFactory {
     func makeLeaguesInteractor() -> LeaguesInteractor
 }
-
-protocol TeamsInteractorFactory {
-    func makeTeamsInteractor() -> TeamsInteractor
-}

@@ -17,6 +17,8 @@ enum Constants {
     
     enum Strings {
         static let emptyString = ""
+        static let navTitle = "Leagues"
+        static let emptyImage = "https://www.thesportsdb.com//images//media//team//badge//1iuew61688452857.png"
     }
 }
 

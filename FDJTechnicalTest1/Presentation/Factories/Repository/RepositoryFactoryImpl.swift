@@ -12,9 +12,3 @@ final class RepositoryFactoryImpl: LeaguesRepositoryFactory {
         return LeagueRepositoryImpl()
     }
 }
-
-extension RepositoryFactoryImpl: TeamsRepositoryFactory {
-    func makeTeamsRepository() -> TeamsRepository {
-        return TeamsRepositoryImpl()
-    }
-}

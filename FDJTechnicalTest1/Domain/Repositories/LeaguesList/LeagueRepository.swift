@@ -9,4 +9,5 @@ import Foundation
 
 protocol LeagueRepository {
     func getLeaguesList() async throws -> [League]
+    func getTeamsList(strLeague: String) async throws -> [Team]
 }

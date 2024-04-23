@@ -55,4 +55,31 @@ final class LeaguesInteractorTests: XCTestCase {
             XCTAssertNotNil(error)
         }
     }
+    
+    func testGetTeamsListSuccess() async throws {
+        // Given
+        spy.mockedTeams = TeamSeeds.teamsList
+        
+        // When
+        let teams = try await sut.getTeamsList(strLeague: "")
+        
+        // Then
+        XCTAssertTrue(spy.getTeamsCalled)
+        XCTAssertNotNil(teams)
+    }
+    
+    func testGetTeamsListFailure() async throws {
+        // Given
+        spy.mockedTeams = nil
+
+        do {
+            // When
+            _ = try await sut.getTeamsList(strLeague: "")
+            XCTFail("Should not happen")
+        } catch let error {
+            // Then
+            XCTAssertTrue(spy.getTeamsCalled)
+            XCTAssertNotNil(error)
+        }
+    }
 }

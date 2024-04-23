@@ -17,10 +17,5 @@ final class ViewModelFactoryImp {
     lazy var leaguesInteractor: LeaguesInteractor = {
         interactorFactory.makeLeaguesInteractor()
     }()
-    
-    lazy var teamsInteractor: TeamsInteractor = {
-        interactorFactory.makeTeamsInteractor()
-    }()
-    
 }
 

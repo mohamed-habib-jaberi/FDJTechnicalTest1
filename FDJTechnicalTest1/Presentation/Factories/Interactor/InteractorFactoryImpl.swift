@@ -20,9 +20,3 @@ extension InteractorFactoryImpl: LeaguesInteractorFactory {
         return LeaguesInteractorImpl(leagueRepository: repositoryFactory.makeLeagueRepository())
     }
 }
-
-extension InteractorFactoryImpl: TeamsInteractorFactory {
-    func makeTeamsInteractor() -> TeamsInteractor {
-        return TeamsInteractorImpl(teamsRepository: repositoryFactory.makeTeamsRepository())
-    }
-}

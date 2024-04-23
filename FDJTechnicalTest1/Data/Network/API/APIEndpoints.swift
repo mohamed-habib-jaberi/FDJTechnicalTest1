@@ -9,5 +9,5 @@ import Foundation
 
 enum APIEndpoints {
     static let apiLeague = "/all_leagues.php"
-    static let apiTeam = "/search_all_teams.php" // ?l=French%20Ligue%201
+    static let apiTeam = "/search_all_teams.php"
 }

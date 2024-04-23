@@ -12,8 +12,8 @@ struct TeamSeeds {
     
     static let emptyTeamsList: [Team] = []
     
-    static let teamsList = [Team(idTeam: "133704", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamLogo: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png"),
-                            Team(idTeam: "133704", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamLogo: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png"),
-                            Team(idTeam: "133704", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamLogo: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png")
+    static let teamsList = [Team(idTeam: "1337044", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamBadge: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png"),
+                            Team(idTeam: "1333704", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamBadge: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png"),
+                            Team(idTeam: "1633704", strTeam: "Brest", strTeamShort: "BRS", strLeague: "French Ligue 1", strTeamBadge: "https://www.thesportsdb.com//images//media//team//logo//pvt5db1607720280.png")
     ]
 }

@@ -18,5 +18,9 @@ class LeaguesInteractorImpl: LeaguesInteractor {
     func getLeaguesList() async throws -> [League] {
         return try await repository.getLeaguesList()
     }
+    
+    func getTeamsList(strLeague: String) async throws -> [Team] {
+        return try await repository.getTeamsList(strLeague: strLeague)
+    }
 }
 

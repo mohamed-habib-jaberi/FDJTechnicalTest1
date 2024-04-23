@@ -13,6 +13,9 @@ final class LeagueRepositorySpy {
     // MARK: - Properties
     var getLeaguesCalled = false
     var mockedLeagues: [League]?
+    
+    var getTeamsCalled = false
+    var mockedTeams: [Team]?
 }
 
 extension LeagueRepositorySpy: LeagueRepository {
@@ -21,6 +24,16 @@ extension LeagueRepositorySpy: LeagueRepository {
         getLeaguesCalled = true
         if let leagues = mockedLeagues {
             return leagues
+        } else {
+            throw NSError(domain: "", code: -1)
+        }
+    }
+    
+    func getTeamsList(strLeague: String) async throws -> [Team] {
+        
+        getTeamsCalled = true
+        if let teams = mockedTeams {
+            return teams
         } else {
             throw NSError(domain: "", code: -1)
         }

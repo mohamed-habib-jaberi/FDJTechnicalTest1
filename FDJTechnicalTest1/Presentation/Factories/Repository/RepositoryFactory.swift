@@ -7,13 +7,8 @@
 
 import Foundation
 
-typealias RepositoryFactory = LeaguesRepositoryFactory & TeamsRepositoryFactory
+typealias RepositoryFactory = LeaguesRepositoryFactory 
 
 protocol LeaguesRepositoryFactory {
     func makeLeagueRepository() -> LeagueRepository
 }
-
-protocol TeamsRepositoryFactory {
-    func makeTeamsRepository() -> TeamsRepository
-}
-

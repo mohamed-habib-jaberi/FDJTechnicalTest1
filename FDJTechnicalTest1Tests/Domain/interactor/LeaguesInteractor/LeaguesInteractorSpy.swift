@@ -14,6 +14,9 @@ class LeaguesInteractorSpy {
     
     var mockedLeagues: [League]?
     var getLeaguesCalled = false
+    
+    var mockedTeams: [Team]?
+    var getTeamsCalled = false
 }
 
 extension LeaguesInteractorSpy: LeaguesInteractor {
@@ -23,6 +26,16 @@ extension LeaguesInteractorSpy: LeaguesInteractor {
         getLeaguesCalled = true
         
         if let model = mockedLeagues {
+            return model
+        } else {
+            throw NSError(domain: "", code: -1)
+        }
+    }
+    
+    func getTeamsList(strLeague: String) async throws -> [Team] {
+        getTeamsCalled = true
+        
+        if let model = mockedTeams {
             return model
         } else {
             throw NSError(domain: "", code: -1)

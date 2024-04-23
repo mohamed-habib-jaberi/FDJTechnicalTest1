@@ -12,11 +12,11 @@ struct TeamDTO: Decodable {
     let strTeam: String?
     let strTeamShort: String?
     let strLeague: String?
-    let strTeamLogo: String?
+    let strTeamBadge: String?
 }
 
 extension TeamDTO {
     func toDomain() -> Team {
-        return .init(idTeam: idTeam, strTeam: strTeam, strTeamShort: strTeamShort, strLeague: strLeague, strTeamLogo: strTeamLogo)
+        return .init(idTeam: idTeam, strTeam: strTeam, strTeamShort: strTeamShort, strLeague: strLeague, strTeamBadge: strTeamBadge)
     }
 }
