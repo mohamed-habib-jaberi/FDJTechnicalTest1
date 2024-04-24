@@ -48,7 +48,7 @@ struct LeaguesView: View {
             }
         }
         .onChange(of: viewModel.searchText) { searchText in
-            Task { 
+            Task {
                 
                 guard !searchText.isEmpty else {
                     viewModel.teams = [] // Clear the teams list
@@ -79,6 +79,9 @@ struct LeaguesView: View {
                 ForEach(viewModel.leagues, id: \.idLeague) { league in
                     if let strLeague = league.strLeague {
                         Text("Ligue :" + "\(String(describing: strLeague))")
+                            .onTapGesture {
+                                viewModel.searchText = strLeague
+                            }
                     }
                     
                 }
