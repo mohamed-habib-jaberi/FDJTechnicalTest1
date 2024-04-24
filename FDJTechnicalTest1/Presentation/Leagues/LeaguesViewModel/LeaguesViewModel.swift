@@ -33,7 +33,7 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
         }
     }
 
-    @Published private(set) var filteredLeagues: [Team] = []
+    @Published private(set) var filteredTeamsByLeague: [Team] = []
 
      var cancellables = Set<AnyCancellable>()
 
@@ -68,7 +68,7 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
     }
 
     func sortTeamsByReverseAlphaAndFilter() {
-        filteredLeagues = filterTeamsbyLeagueName().sorted(by: { (team1, team2) in
+        filteredTeamsByLeague = filterTeamsbyLeagueName().sorted(by: { (team1, team2) in
             if let strTeam1 = team1.strTeam, let strTeam2 = team2.strTeam {
                 return strTeam1 > strTeam2
             } else {

@@ -74,7 +74,7 @@ struct LeaguesView: View {
     
     @ViewBuilder
     private var hasLeagues: some View {
-        TeamContentGridView(teams: viewModel.filteredLeagues)
+        TeamContentGridView(teams: viewModel.filteredTeamsByLeague)
             .searchable(text: $viewModel.searchText) {
                 ForEach(viewModel.leagues, id: \.idLeague) { league in
                     if let strLeague = league.strLeague {
