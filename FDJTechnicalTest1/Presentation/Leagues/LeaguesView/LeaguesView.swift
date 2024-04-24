@@ -52,7 +52,7 @@ struct LeaguesView: View {
                 
                 guard !searchText.isEmpty else {
                     viewModel.teams = [] // Clear the teams list
-                    viewModel.filterLeagues() // Update filtered leagues
+                    viewModel.sortTeamsByReverseAlphaAndFilter() // Update filtered leagues
                     return
                 }
                 
@@ -68,7 +68,7 @@ struct LeaguesView: View {
                 
                 viewModel.searchText = searchText // Update searchTextPublisher
             }
-            viewModel.filterLeagues()
+            viewModel.sortTeamsByReverseAlphaAndFilter()
         }
     }
     

@@ -38,7 +38,7 @@ class LeaguesViewModelTests: XCTestCase {
         sut.searchText = ""
             
             // When
-        sut.filterLeagues()
+        sut.filterTeamsbyLeagueName()
             
             // Then
             XCTAssertEqual(sut.filteredLeagues, teams, "Filtered leagues should be equal to teams when search text is empty")

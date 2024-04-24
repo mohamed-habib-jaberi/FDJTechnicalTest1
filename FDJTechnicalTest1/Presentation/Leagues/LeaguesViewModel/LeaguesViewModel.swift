@@ -52,13 +52,13 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
     func makeLeaguesViewModel() -> LeaguesViewModel {
         return .init(leaguesInteractor: self.leaguesInteractor)
     }
-
-    func filterLeagues() {
+    
+    func filterTeamsbyLeagueName() -> [Team] {
         if searchText.isEmpty {
-            filteredLeagues = teams
+            return teams
         } else {
-            filteredLeagues = teams.filter {
-                if let strLeague = $0.strLeague {
+            return teams.filter { team in
+                if let strLeague = team.strLeague {
                     return strLeague.localizedCaseInsensitiveContains(searchText)
                 } else {
                     return false
@@ -67,6 +67,19 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
         }
     }
 
+    func sortTeamsByReverseAlphaAndFilter() {
+        filteredLeagues = filterTeamsbyLeagueName().sorted(by: { (team1, team2) in
+            if let strTeam1 = team1.strTeam, let strTeam2 = team2.strTeam {
+                return strTeam1 > strTeam2
+            } else {
+                return false
+            }
+        }).enumerated().compactMap { (index, team) in
+            index % 2 == 0 ? team : nil
+        }
+    }
+
+
     @MainActor
     func loadLeagues() async {
         do {
@@ -74,7 +87,7 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
 
             leagues = try await leaguesInteractor.getLeaguesList()
             status = leagues.isEmpty ? .emptyLeagues : .hasLeagues
-            filterLeagues()
+            sortTeamsByReverseAlphaAndFilter()
         } catch {
             status = .onError
         }
@@ -88,12 +101,9 @@ final class LeaguesViewModel: ObservableObject, LeaguesViewModelFactory {
             teams = try await leaguesInteractor.getTeamsList(strLeague: searchText)
 
             status = teams.isEmpty ? .emptyLeagues : .hasLeagues
-            filterLeagues()
+            sortTeamsByReverseAlphaAndFilter()
         } catch {
             status = .onError
         }
     }
 }
-
-
-
